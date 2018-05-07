@@ -1,0 +1,25 @@
+{
+  "name": "social-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "start -p": "node src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.17",
+    "multer": "^1.3.0",
+    "nodemon": "^1.17.4",
+    "socket.io": "^2.1.0",
+    "string-hash": "^1.1.3"
+  }
+}
