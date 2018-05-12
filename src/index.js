@@ -2,4 +2,5 @@
 
 const Application = require('./app/app');
 
-new Application();
+const app = new Application();
+app.start();

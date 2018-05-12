@@ -9,8 +9,16 @@ const Router = require('express').Router;
 class BaseRouter {
 
     constructor(prefix) {
-        this.mPrefix = prefix;
-        this.mRouter = Router();
+        this._prefixM = prefix;
+        this._routerM = Router();
+    }
+
+    getRouter(){
+        return this._routerM;
+    }
+
+    getPrefix(){
+        return this._prefixM;
     }
 
     checkRequired(required, req) {
