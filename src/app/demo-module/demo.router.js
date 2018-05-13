@@ -1,6 +1,7 @@
 'use strict';
 
 const BaseRouter = require('../core-module/base/base.router');
+const {sayHelloWorld} = require('./demo.action');
 
 class DemoRouter extends BaseRouter {
 
@@ -11,7 +12,7 @@ class DemoRouter extends BaseRouter {
     }
 
     helloWorld(req, res) {
-        res.send('Hello World!')
+        res.send(sayHelloWorld())
     }
 
 }
