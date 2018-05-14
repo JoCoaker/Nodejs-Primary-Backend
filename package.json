@@ -1,5 +1,5 @@
 {
-  "name": "social-backend",
+  "name": "nodejs-primary-backend",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
