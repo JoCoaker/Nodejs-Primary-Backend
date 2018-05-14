@@ -25,7 +25,7 @@ class App {
         this._appM = express();
         this._serverM = Server(this._appM);
 
-        // this._initDatabase();
+        this._initDatabase();
         this._initApp();
         this._addRouters();
     }

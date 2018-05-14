@@ -1,5 +1,5 @@
 {
-    "name": "my_db_name",
+    "name": "demo_db",
     "host": "localhost",
     "port": "27017"
 }
