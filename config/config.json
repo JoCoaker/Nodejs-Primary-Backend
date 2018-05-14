@@ -1,3 +1,7 @@
 {
-  "port": 8080
+  "port": 8080,
+  "jwt": {
+    "privateKey": "private_key.ppk",
+    "publicKey": "public_key.pub"
+  }
 }
