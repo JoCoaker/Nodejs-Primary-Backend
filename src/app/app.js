@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 
 const DemoRouter = require('./demo-module/demo.router');
+const {verifyJWT} = require('./auth-module/auth.middleware');
 
 const CONFIG = JSON.parse(fs.readFileSync('./config/config.json', 'utf8'));
 const DATABASE = JSON.parse(fs.readFileSync('./config/database.json', 'utf8'));
@@ -67,7 +68,7 @@ class App {
         this._appM.use((req, res, next) => {
             res.header('Access-Control-Allow-Origin', '*');
             res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-            res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials');
+            res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, X-Access-Token, Access-Control-Allow-Credentials');
             res.header('Access-Control-Expose-Headers', 'X-Requested-With, Token-Refresh');
             res.header('Access-Control-Allow-Credentials', 'true');
             next();
@@ -84,6 +85,9 @@ class App {
 
         // Add Routes to app.
         this._appM.use(demo.getPrefix(), demo.getRouter());
+
+        // For protected Routes:
+        // this._appM.use(demo.getPrefix(), verifyJWT, demo.getRouter())
     }
 }
 
