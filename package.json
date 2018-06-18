@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "start -p": "node src/index.js"
+    "start -p": "node src/index.js",
+    "mongo": "mongod --dbpath /db/path"
   },
   "engines": {
     "node": ">=8.9.3"
